@@ -9,7 +9,7 @@ export default defineConfig({
       fileName: () => 'index.js',
     },
     outDir: 'dist',
-    target: 'node20',
+    target: 'node22',
     rollupOptions: {
       external: builtinModules.flatMap(m => [m, `node:${m}`]),
     },
