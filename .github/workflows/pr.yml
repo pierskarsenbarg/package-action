@@ -18,5 +18,9 @@ jobs:
           cache: 'npm'
 
       - run: npm ci
+        if: github.event_name == 'push'
+
+      - run: npm i
+        if: github.event_name == 'pull_request'
 
       - run: npm test
