@@ -1,0 +1,13 @@
+name: 'Package Folders'
+description: 'Zips each top-level folder in the repository (or working directory) into a separate zip file'
+inputs:
+  working-directory:
+    description: 'Optional path to look for top-level folders instead of the repo root'
+    required: false
+    default: '.'
+outputs:
+  zip-files:
+    description: 'JSON array of zip file names that were created (e.g. ["alpha.zip","beta.zip"])'
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
